@@ -17,7 +17,8 @@ npm i mpvue-htmlparse
 ``` vue
 <template>
   <div>
-    <htmlParse :data="content" />
+    <htmlParse :data="content"  />
+    <htmlParse :html="html"  />
   </div>
 </template>
 
@@ -30,6 +31,7 @@ export default {
   },
   data () {
     return {
+      html: '<div style="color: red; font-size: 12px;">html test</div>'
       content: [...nodeList]
     }
   }
