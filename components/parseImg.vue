@@ -41,9 +41,9 @@ export default {
         const ratio = 690 / imgW;
         let imageStyle;
         if (imgH / this.dp >= 690) {
-          imageStyle = 'width: 690rpx; height:' + imgH * ratio + 'rpx;';
+          imageStyle = `width: 690rpx; height: ${imgH * ratio}rpx;`;
         } else {
-          imageStyle = 'width: ' + imgW + 'px; height:' + imgH + 'px;';
+          imageStyle = `width: ${imgW * this.dp}px; height: ${imgH * this.dp}px;`;
         }
         this.htmlParseImageStyle = imageStyle;
         if (!this.$root.htmlParseImageUrl) {
